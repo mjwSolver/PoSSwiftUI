@@ -15,8 +15,8 @@ struct CafeteriaView: View {
         NavigationStack{
 //            Text("Menu Selection")
             List{
-                Text("Select a Menu")
-                    .font(.headline)
+//                Text("Select a Menu")
+//                    .font(.headline)
                 ForEach(theCafeteria.menuList){ menuItem in
                     
                     HStack{
@@ -38,8 +38,8 @@ struct CafeteriaView: View {
                 }
                 
             }
+            .navigationTitle("Select a Menu")
         }
-        .navigationTitle("Select a Menu")
         
     }
 }

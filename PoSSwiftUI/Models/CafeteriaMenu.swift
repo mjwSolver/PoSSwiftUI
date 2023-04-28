@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ModelData {
+final class AllCafeteriaMenu {
         
     let MENU_TUKUTUKU = [
         MenuItem(id: 1, name: "Tahu isi", price: 10000),

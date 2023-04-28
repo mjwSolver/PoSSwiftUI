@@ -20,6 +20,7 @@
 		04D720D829FB51DE0073B28E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720D729FB51DE0073B28E /* Item.swift */; };
 		04D720DA29FB52050073B28E /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720D929FB52050073B28E /* CartItem.swift */; };
 		04D720DC29FB52B90073B28E /* CafeteriaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720DB29FB52B90073B28E /* CafeteriaMenu.swift */; };
+		04D720E029FB59A70073B28E /* CafeteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720DF29FB59A70073B28E /* CafeteriaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		04D720D729FB51DE0073B28E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		04D720D929FB52050073B28E /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		04D720DB29FB52B90073B28E /* CafeteriaMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaMenu.swift; sourceTree = "<group>"; };
+		04D720DF29FB59A70073B28E /* CafeteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				046413A129FB3F3D00082BDD /* AllCafeteriaView.swift */,
+				04D720DF29FB59A70073B28E /* CafeteriaView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				04D720D829FB51DE0073B28E /* Item.swift in Sources */,
 				046413A629FB418400082BDD /* MenuItem.swift in Sources */,
 				04D720DA29FB52050073B28E /* CartItem.swift in Sources */,
+				04D720E029FB59A70073B28E /* CafeteriaView.swift in Sources */,
 				04D720DC29FB52B90073B28E /* CafeteriaMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

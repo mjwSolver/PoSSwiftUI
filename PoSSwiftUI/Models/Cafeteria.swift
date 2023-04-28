@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Cafeteria {
+class Cafeteria: Identifiable {
     let name: String;
     let menuList: [MenuItem]
     

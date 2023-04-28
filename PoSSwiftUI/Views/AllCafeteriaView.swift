@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct AllCafeteriaView: View {
+    
+    private var theCafeterias = AllCafeteriaMenu().THE_CAFETERIAS
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ForEach(theCafeterias){ cafeteria in
+                
+                NavigationLink{
+                    CafeteriaView(theCafeteria: cafeteria)
+                } label: {
+                    Text(cafeteria.name)
+                }
+                
+            }
+        }
     }
 }
 

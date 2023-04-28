@@ -12,16 +12,21 @@ struct AllCafeteriaView: View {
     private var theCafeterias = AllCafeteriaMenu().THE_CAFETERIAS
     
     var body: some View {
-        VStack{
-            ForEach(theCafeterias){ cafeteria in
-                
-                NavigationLink{
-                    CafeteriaView(theCafeteria: cafeteria)
-                } label: {
-                    Text(cafeteria.name)
+        NavigationStack {
+            List {
+                Text("Select a Cafeteria")
+                    .font(.headline)
+                ForEach(theCafeterias){ cafeteria in
+                    
+                    NavigationLink{
+                        CafeteriaView(theCafeteria: cafeteria)
+                    } label: {
+                        Text(cafeteria.name)
+                    }
+                    
                 }
-                
             }
+            .navigationTitle("UC PoS")
         }
     }
 }

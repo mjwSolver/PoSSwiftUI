@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MenuItem: Item {
+class MenuItem: Item, Identifiable {
     
     var id = 0
     var name = ""

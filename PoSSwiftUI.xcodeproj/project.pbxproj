@@ -21,6 +21,7 @@
 		04D720DA29FB52050073B28E /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720D929FB52050073B28E /* CartItem.swift */; };
 		04D720DC29FB52B90073B28E /* CafeteriaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720DB29FB52B90073B28E /* CafeteriaMenu.swift */; };
 		04D720E029FB59A70073B28E /* CafeteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720DF29FB59A70073B28E /* CafeteriaView.swift */; };
+		04D720E229FB61660073B28E /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D720E129FB61660073B28E /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		04D720D929FB52050073B28E /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		04D720DB29FB52B90073B28E /* CafeteriaMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaMenu.swift; sourceTree = "<group>"; };
 		04D720DF29FB59A70073B28E /* CafeteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaView.swift; sourceTree = "<group>"; };
+		04D720E129FB61660073B28E /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				046413A129FB3F3D00082BDD /* AllCafeteriaView.swift */,
 				04D720DF29FB59A70073B28E /* CafeteriaView.swift */,
+				04D720E129FB61660073B28E /* OrderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				04D720DA29FB52050073B28E /* CartItem.swift in Sources */,
 				04D720E029FB59A70073B28E /* CafeteriaView.swift in Sources */,
 				04D720DC29FB52B90073B28E /* CafeteriaMenu.swift in Sources */,
+				04D720E229FB61660073B28E /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0452B97E29FFFE4D0040981A /* ModalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B97D29FFFE4D0040981A /* ModalData.swift */; };
+		0452B9802A0006BC0040981A /* ShoppingCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452B97F2A0006BC0040981A /* ShoppingCartView.swift */; };
 		0464137429FB38D700082BDD /* PoSSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464137329FB38D700082BDD /* PoSSwiftUIApp.swift */; };
 		0464137629FB38D700082BDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0464137529FB38D700082BDD /* ContentView.swift */; };
 		0464137829FB38D900082BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0464137729FB38D900082BDD /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0452B97D29FFFE4D0040981A /* ModalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalData.swift; sourceTree = "<group>"; };
+		0452B97F2A0006BC0040981A /* ShoppingCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartView.swift; sourceTree = "<group>"; };
 		0464137029FB38D700082BDD /* PoSSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoSSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0464137329FB38D700082BDD /* PoSSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoSSwiftUIApp.swift; sourceTree = "<group>"; };
 		0464137529FB38D700082BDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				046413A129FB3F3D00082BDD /* AllCafeteriaView.swift */,
 				04D720DF29FB59A70073B28E /* CafeteriaView.swift */,
 				04D720E129FB61660073B28E /* OrderView.swift */,
+				0452B97F2A0006BC0040981A /* ShoppingCartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				04D720DA29FB52050073B28E /* CartItem.swift in Sources */,
 				04D720E029FB59A70073B28E /* CafeteriaView.swift in Sources */,
 				04D720DC29FB52B90073B28E /* CafeteriaMenu.swift in Sources */,
+				0452B9802A0006BC0040981A /* ShoppingCartView.swift in Sources */,
 				04D720E229FB61660073B28E /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

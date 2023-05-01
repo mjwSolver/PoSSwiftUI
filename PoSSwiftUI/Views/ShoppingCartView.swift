@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct ShoppingCartView: View {
+    @EnvironmentObject var theModelData: ModelData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        if(theModelData.ShoppingCart.isEmpty) {
+            Text("Your shopping cart is empty")
+        } else {
+            Text("There is something here")
+        }
+        
     }
 }
 
 struct ShoppingCartView_Previews: PreviewProvider {
     static var previews: some View {
         ShoppingCartView()
+            .environmentObject(ModelData())
     }
 }

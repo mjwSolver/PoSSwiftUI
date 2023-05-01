@@ -22,7 +22,10 @@ struct CafeteriaView: View {
                     HStack{
                         
                         NavigationLink {
-                            
+                            OrderView(
+                                theMenuItem: menuItem,
+                                theStoreName: theCafeteria.name
+                            )
                         } label: {
                             HStack {
                                 Text(menuItem.name)

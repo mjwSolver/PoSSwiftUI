@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct PoSSwiftUIApp: App {
+    @StateObject private var modeldata = ModelData()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(modeldata)
         }
     }
 }

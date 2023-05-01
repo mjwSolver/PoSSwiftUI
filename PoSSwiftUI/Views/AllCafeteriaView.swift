@@ -25,9 +25,22 @@ struct AllCafeteriaView: View {
                     }
                     
                 }
-            }
+                
+                Section(header: Text("Your Shopping Cart")
+                    .foregroundColor(.black)
+                    .fontWeight(.medium)
+                ) {
+                    NavigationLink{
+                        ShoppingCartView()
+                    } label: {
+                        Text("🛒 View My Shopping Cart")
+                    }
+                }
+                
+            } // End of the List
             .navigationTitle("UC PoS")
-        }
+
+        } // End of the NavigationStack
     }
 }
 

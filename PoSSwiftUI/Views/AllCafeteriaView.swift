@@ -34,5 +34,6 @@ struct AllCafeteriaView: View {
 struct AllCafeteriaView_Previews: PreviewProvider {
     static var previews: some View {
         AllCafeteriaView()
+            .environmentObject(ModelData())
     }
 }

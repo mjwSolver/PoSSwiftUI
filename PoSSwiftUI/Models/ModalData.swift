@@ -53,7 +53,7 @@ final class ModelData: ObservableObject {
     
     init(){
         // Turn this off after diagnosing
-        self.theShoppingCart.contents.append(contentsOf: dummyCart)
+//        self.theShoppingCart.contents.append(contentsOf: dummyCart)
     }
 }
 

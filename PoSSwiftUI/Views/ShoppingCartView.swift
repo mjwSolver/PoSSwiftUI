@@ -72,6 +72,7 @@ struct ShoppingCartView: View {
                                 onDismiss: {
                                     if paymentSucceeded {
                                         self.presentationMode.wrappedValue.dismiss()
+                                        theCart.contents.removeAll()
                                     }
                                 }) {
                                     CheckoutSheet(paymentSucceeded: $paymentSucceeded)

@@ -116,11 +116,22 @@ struct OrderView: View {
     func processTheOrder(is theAmount:Int){
         // Take the amount and the name
         // create a CartItem
+        // combine with previous order if available
         // Add the order to the ShoppingCart
         
-        let theItem = CartItem(menuItem: theMenuItem, quantity: theAmount, storeName: theStoreName )
+        let theCart = theModelData.theShoppingCart
+        let previousItemExist = theCart.isSimilarItemInCartOf(id: theMenuItem.id)
         
-        theModelData.ShoppingCart.append(theItem)
+        if previousItemExist {
+            
+            let theIndex = theCart.retrieveItemInCart(id: theMenuItem.id)
+            theCart.contents[theIndex].quantity += theAmount
+            
+            return
+        }
+        
+        let theItem = CartItem(menuItem: theMenuItem, quantity: theAmount, storeName: theStoreName )
+        theModelData.theShoppingCart.contents.append(theItem)
         
     }
     

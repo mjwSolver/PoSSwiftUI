@@ -14,13 +14,13 @@ struct ShoppingCartView: View {
     
     var body: some View {
         
-        if(theModelData.ShoppingCart.isEmpty) {
+        if(theModelData.theShoppingCart.contents.isEmpty) {
             Text("Your shopping cart is empty")
         } else {
             VStack {
                 List {
                     
-                    ForEach(theModelData.ShoppingCart){ cartItem in
+                    ForEach(theModelData.theShoppingCart.contents){ cartItem in
                         VStack(alignment: .leading) {
                             Text(cartItem.name)
                                 .fontWeight(.medium)
@@ -30,11 +30,24 @@ struct ShoppingCartView: View {
                         
                     }
                     
+                    // Print total here
+                    
+                    
+                    // Option to break
                     Section(header: Text("")
                         .foregroundColor(.black)
                         .fontWeight(.medium)
                     ){
-                        Button("Checkout?", action:{})
+                        HStack{
+                            Spacer()
+//                            NavigationLink {
+//
+//                            } label: {
+//                                Text("Checkout?")
+//                            }
+//                            Button("Checkout?", action:{})
+                            Spacer()
+                        }
                     }
                     
                 }
@@ -44,6 +57,10 @@ struct ShoppingCartView: View {
         }
         
     }
+    
+    // This is a little bit incorrect as the logic should be stored elsewhere
+    
+    
 }
 
 // Adding the logic to group the purchases together

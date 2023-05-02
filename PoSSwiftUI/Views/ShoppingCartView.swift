@@ -7,31 +7,55 @@
 
 import SwiftUI
 
-
 struct ShoppingCartView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var theModelData: ModelData
-    @State private var isSuccesfulCheckout = false
-    
+    @State private var showCheckOut = false
+    @State private var paymentSucceeded = false
+        
     var body: some View {
         
-        if(theModelData.theShoppingCart.contents.isEmpty) {
+        let theCart = theModelData.theShoppingCart
+        
+        if(theCart.contents.isEmpty) {
             Text("Your shopping cart is empty")
         } else {
+            
+            let storesVisited = theCart.extraAllStoreNames()
+            
             VStack {
                 List {
                     
-                    ForEach(theModelData.theShoppingCart.contents){ cartItem in
-                        VStack(alignment: .leading) {
-                            Text(cartItem.name)
-                                .fontWeight(.medium)
-                            Text("\(cartItem.price) x \(cartItem.quantity) = \(cartItem.price*cartItem.quantity)")
-                                .fontWeight(.light)
+                    ForEach(storesVisited) { storeVisit in
+                        Section(header:Text(storeVisit.myName)){
+                            
+                            let selectedItems = theCart.contents.filter {
+                                $0.storeName == storeVisit.myName }
+                            
+                            ForEach(selectedItems) { cartItem in
+                                
+                                VStack(alignment: .leading) {
+                                    Text(cartItem.name)
+                                        .fontWeight(.medium)
+                                    Text("\(cartItem.price) x \(cartItem.quantity) = \(cartItem.price*cartItem.quantity)")
+                                        .fontWeight(.light)
+                                }
+                                
+                            }
+                            
+//                            Text("SubTotal: Rp. \(subTotal)")
+                            
                         }
-                        
                     }
                     
                     // Print total here
-                    
+                    Section(header: Text("YOUR TOTAL PURCHASE")
+                        .foregroundColor(.black)
+                        .fontWeight(.medium)
+                    ){
+                        let finalBill = theCart.calculateTotalBill()
+                        Text("Rp. \(finalBill).00-")
+                    }
                     
                     // Option to break
                     Section(header: Text("")
@@ -40,12 +64,23 @@ struct ShoppingCartView: View {
                     ){
                         HStack{
                             Spacer()
-//                            NavigationLink {
-//
-//                            } label: {
-//                                Text("Checkout?")
-//                            }
-//                            Button("Checkout?", action:{})
+                            Button("Checkout?", action:{
+                                showCheckOut.toggle()
+                                
+                                if paymentSucceeded {
+                                    print("backing")
+                                    self.presentationMode.wrappedValue.dismiss()
+                                }
+                                
+                            })
+                            .sheet(isPresented: $showCheckOut) {
+                                CheckoutSheet(paymentSucceeded: $paymentSucceeded)
+                                
+//                                if ($paymentSucceeded.wrappedValue) {
+//                                   self.presentationMode.wrappedValue.dismiss()
+//                                }
+                                
+                            }
                             Spacer()
                         }
                     }

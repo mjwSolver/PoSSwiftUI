@@ -8,18 +8,25 @@
 import Foundation
 
 final class ModelData: ObservableObject {
-    @Published var ShoppingCart: [CartItem] = [
-        CartItem(
-            menuItem: MenuItem(id: 4, name: "Air mineral", price: 2000),
-            quantity: 3,
-            storeName: "🔺 Tuku-Tuku"
-        ),
-        CartItem(
-            menuItem: MenuItem(id: 1, name: "Tahu isi", price: 10000),
-            quantity: 2,
-            storeName: "🔺 Tuku-Tuku"
-        )
-    ]
+    var theShoppingCart:ShoppingCart = ShoppingCart()
+    
+//    @Published var ShoppingCart: [CartItem] = [
+//        CartItem(
+//            menuItem: MenuItem(id: 4, name: "Air mineral", price: 2000),
+//            quantity: 3,
+//            storeName: "🔺 Tuku-Tuku"
+//        ),
+//        CartItem(
+//            menuItem: MenuItem(id: 1, name: "Tahu isi", price: 10000),
+//            quantity: 2,
+//            storeName: "🔺 Tuku-Tuku"
+//        ),
+//        CartItem(
+//            menuItem: MenuItem(id: 4, name: "Air mineral", price: 2000),
+//            quantity: 2,
+//            storeName: "🔺 Tuku-Tuku"
+//        ),
+//    ]
     
     var dummyCart = [
         CartItem(
@@ -43,6 +50,11 @@ final class ModelData: ObservableObject {
             storeName: "🔺 Tuku-Tuku"
         ),
     ]
+    
+    init(){
+        // Turn this off after diagnosing
+        self.theShoppingCart.contents.append(contentsOf: dummyCart)
+    }
 }
 
 //Cafeteria(name: "🔺 Tuku-Tuku", menuList: MENU_TUKUTUKU),

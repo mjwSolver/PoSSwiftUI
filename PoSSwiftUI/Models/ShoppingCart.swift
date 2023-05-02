@@ -9,9 +9,9 @@ import Foundation
 
 class ShoppingCart {
     
-   var contents: [CartItem] = []
-    
     init() {}
+    
+    var contents: [CartItem] = []
     
     func isSimilarItemInCartOf(id: Int) -> Bool{
         

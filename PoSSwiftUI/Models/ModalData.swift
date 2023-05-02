@@ -31,7 +31,7 @@ final class ModelData: ObservableObject {
     var dummyCart = [
         CartItem(
             menuItem: MenuItem(id: 4, name: "Air mineral", price: 2000),
-            quantity: 3,
+            quantity: 5,
             storeName: "🔺 Tuku-Tuku"
         ),
         CartItem(
@@ -44,16 +44,16 @@ final class ModelData: ObservableObject {
             quantity: 3,
             storeName: "㐯 Xiang Jia"
         ),
-        CartItem(
-            menuItem: MenuItem(id: 4, name: "Air mineral", price: 2000),
-            quantity: 2,
-            storeName: "🔺 Tuku-Tuku"
-        ),
+//        CartItem(
+//            menuItem: MenuItem(id: 4, name: "Air mineral", price: 2000),
+//            quantity: 2,
+//            storeName: "🔺 Tuku-Tuku"
+//        ),
     ]
     
     init(){
         // Turn this off after diagnosing
-//        self.theShoppingCart.contents.append(contentsOf: dummyCart)
+        self.theShoppingCart.contents.append(contentsOf: dummyCart)
     }
 }
 

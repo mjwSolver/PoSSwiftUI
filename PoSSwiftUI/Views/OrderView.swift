@@ -125,6 +125,10 @@ struct OrderView: View {
         if previousItemExist {
             
             let theIndex = theCart.retrieveItemInCart(id: theMenuItem.id)
+            if theIndex == -1 {
+                print(" No Similar Item found, duplicate ID?")
+                return
+            }
             theCart.contents[theIndex].quantity += theAmount
             
             return

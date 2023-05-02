@@ -7,6 +7,16 @@
 
 import Foundation
 
+struct theStore: Identifiable {
+    var id: Int
+    var myName:String
+    
+    init(id ID:Int, storeNameIs storeName:String){
+        self.id = ID
+        self.myName = storeName
+    }
+}
+
 class ShoppingCart {
     
     init() {}
@@ -43,9 +53,25 @@ class ShoppingCart {
         
     }
     
-    func extractAllStoreNames() -> [String] {
+//    func extractAllStoreNames() -> [String] {
+//
+//        var AllTheStores: [String] = []
+//
+//        for theItems in contents {
+//
+//            if !AllTheStores.contains( theItems.storeName ) {
+//                AllTheStores.append( theItems.storeName )
+//            }
+//
+//        }
+//
+//        return AllTheStores
+//    }
+    
+    func extraAllStoreNames() -> [theStore] {
         
         var AllTheStores: [String] = []
+        var StoresAsStruct: [theStore] = []
         
         for theItems in contents {
       
@@ -55,7 +81,12 @@ class ShoppingCart {
             
         }
         
-        return AllTheStores
+        for (index, storeName) in AllTheStores.enumerated() {
+            StoresAsStruct.append(theStore(id:index, storeNameIs: storeName))
+        }
+        
+        return StoresAsStruct
+
     }
     
 }

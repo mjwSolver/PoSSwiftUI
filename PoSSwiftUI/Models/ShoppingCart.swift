@@ -89,5 +89,17 @@ class ShoppingCart {
 
     }
     
+    func calculateTotalBill() -> Int {
+        
+        var finalBill = 0
+        
+        for menuItem in contents {
+            finalBill += menuItem.quantity * menuItem.price
+        }
+        
+        return finalBill
+        
+    }
+    
 }
 

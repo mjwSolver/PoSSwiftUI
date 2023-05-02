@@ -66,15 +66,15 @@ struct ShoppingCartView: View {
                             Spacer()
                             Button("Checkout?", action:{
                                 showCheckOut.toggle()
-                                
-                                if paymentSucceeded {
-                                    print("backing")
-                                    self.presentationMode.wrappedValue.dismiss()
-                                }
-                                
                             })
-                            .sheet(isPresented: $showCheckOut) {
-                                CheckoutSheet(paymentSucceeded: $paymentSucceeded)
+                            .sheet(
+                                isPresented: $showCheckOut,
+                                onDismiss: {
+                                    if paymentSucceeded {
+                                        self.presentationMode.wrappedValue.dismiss()
+                                    }
+                                }) {
+                                    CheckoutSheet(paymentSucceeded: $paymentSucceeded)
                                 
 //                                if ($paymentSucceeded.wrappedValue) {
 //                                   self.presentationMode.wrappedValue.dismiss()

@@ -35,7 +35,7 @@ struct CheckoutSheet: View {
              
             Button("Pay"){
                 if processPayment(finalBill: theFinalBill) {
-                    paymentSucceeded.toggle()
+                    paymentSucceeded = true
                     dismiss()
 //                    self.presentationMode.wrappedValue.dismiss()
 
